@@ -1,7 +1,32 @@
+import os
+import json
+from flask import send_file
 from flask import render_template, redirect, request, url_for
 from app import app
 from app.forms import ProductIdForm
 from app.models import Product
+
+
+
+@app.route("/download/<product_id>/<file_format>")
+def download(product_id, file_format):
+    file_path = f"./app/data/opinions/{product_id}.{file_format}"
+    
+    
+    if not os.path.exists(file_path):
+        with open(f"./app/data/opinions/{product_id}.json", "r", encoding="utf-8") as jf:
+            opinions = pd.read_json(jf)
+        
+        if file_format == "csv":
+            opinions.to_csv(file_path, index=False)
+        elif file_format == "xlsx":
+            opinions.to_excel(file_path, index=False)
+        elif file_format == "json":
+            pass  
+        else:
+            return "Invalid file format", 400
+
+    return send_file(file_path, as_attachment=True)
 
 @app.route("/")
 def index():
@@ -32,7 +57,9 @@ def extract():
 
 @app.route("/product/<product_id>")
 def product(product_id):
-    return render_template("product.html", product_id=product_id)
+    with open(f"./app/data/opinions/{product_id}.json", encoding="utf-8") as jf:
+        opinions = json.load(jf)
+    return render_template("product.html", product_id=product_id, opinions=opinions)
 
 @app.route("/charts/<product_id>")
 def charts(product_id):

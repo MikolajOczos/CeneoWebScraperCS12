@@ -1,4 +1,56 @@
 {% extends 'base.html' %}
-{% block title %}{{product_id}}{% endblock %}
+
+{% block title %}Product {{ product_id }}{% endblock %}
+
 {% block content %}
+<h1>Opinions for Product ID: {{ product_id }}</h1>
+
+<div style="margin-bottom: 1em;">
+    <a href="{{ url_for('download', product_id=product_id, file_format='csv') }}" class="btn btn-primary">Download CSV</a>
+    <a href="{{ url_for('download', product_id=product_id, file_format='xlsx') }}" class="btn btn-primary">Download XLSX</a>
+    <a href="{{ url_for('download', product_id=product_id, file_format='json') }}" class="btn btn-primary">Download JSON</a>
+    <a href="{{ url_for('charts', product_id=product_id) }}" class="btn btn-secondary">View Charts</a>
+</div>
+
+<table id="opinions" class="display">
+    <thead>
+        <tr>
+            <th>Author</th>
+            <th>Recommendation</th>
+            <th>Stars</th>
+            <th>Pros</th>
+            <th>Cons</th>
+            <th>Up Votes</th>
+            <th>Down Votes</th>
+            <th>Published</th>
+            <th>Purchased</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for opinion in opinions %}
+        <tr>
+            <td>{{ opinion.author }}</td>
+            <td>{{ opinion.recommend }}</td>
+            <td>{{ opinion.stars }}</td>
+            <td>{{ opinion.pros_en | join(', ') }}</td>
+            <td>{{ opinion.cons_en | join(', ') }}</td>
+            <td>{{ opinion.up_votes }}</td>
+            <td>{{ opinion.down_votes }}</td>
+            <td>{{ opinion.published }}</td>
+            <td>{{ opinion.purchased }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<!-- DataTables JS/CSS -->
+<link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+
+<script>
+    $(document).ready(function() {
+        $('#opinions').DataTable();
+    });
+</script>
 {% endblock %}
