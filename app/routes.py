@@ -1,6 +1,6 @@
 import os
 import json
-from flask import send_file
+from flask import send_file, abort
 from flask import render_template, redirect, request, url_for
 from app import app
 from app.forms import ProductIdForm
@@ -8,23 +8,21 @@ from app.models import Product
 
 
 
+
 @app.route("/download/<product_id>/<file_format>")
 def download(product_id, file_format):
-    file_path = f"./app/data/opinions/{product_id}.{file_format}"
-    
-    
-    if not os.path.exists(file_path):
-        with open(f"./app/data/opinions/{product_id}.json", "r", encoding="utf-8") as jf:
-            opinions = pd.read_json(jf)
-        
-        if file_format == "csv":
-            opinions.to_csv(file_path, index=False)
-        elif file_format == "xlsx":
-            opinions.to_excel(file_path, index=False)
-        elif file_format == "json":
-            pass  
-        else:
-            return "Invalid file format", 400
+    base_dir = app.root_path  # This is the path to the 'app' folder
+    if file_format == 'json':
+        file_path = os.path.join(base_dir, "data", "opinions", f"{product_id}.json")
+    elif file_format == 'csv':
+        file_path = os.path.join(base_dir, "data", "opinions", f"{product_id}.csv")
+    elif file_format == 'xlsx':
+        file_path = os.path.join(base_dir, "data", "opinions", f"{product_id}.xlsx")
+    else:
+        abort(404)
+
+    if not os.path.isfile(file_path):
+        abort(404)
 
     return send_file(file_path, as_attachment=True)
 
