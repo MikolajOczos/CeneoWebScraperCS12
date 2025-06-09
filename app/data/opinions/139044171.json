@@ -1,0 +1,178 @@
+[
+    {
+        "opinion_id": "18167237",
+        "author": "Kinga",
+        "recommend": true,
+        "stars": 5.0,
+        "content_pl": "Podstawowa wersja szczoteczki w pięknym, niepowtarzalnym i moim ulubionym kolorze, szczoteczka spełnia moje oczekiwania.",
+        "pros_pl": [
+            "głośność pracy",
+            "łatwość czyszczenia",
+            "wygoda używania"
+        ],
+        "cons_pl": [],
+        "up_votes": 0,
+        "down_votes": 0,
+        "published": "2023-12-04 08:04:39",
+        "purchased": "2023-11-12 11:05:26",
+        "content_en": "The basic version of the brush in a beautiful, unique and my favorite color, the brush meets my expectations.",
+        "pros_en": [
+            "volume of work",
+            "ease of cleaning",
+            "convenience of use"
+        ],
+        "cons_en": []
+    },
+    {
+        "opinion_id": "18476944",
+        "author": "d...9",
+        "recommend": true,
+        "stars": 5.0,
+        "content_pl": "Szczoteczka swietna. Dobrze czysci zeby, takze masuje dziasla.",
+        "pros_pl": [
+            "głośność pracy",
+            "łatwość czyszczenia",
+            "wygoda używania"
+        ],
+        "cons_pl": [],
+        "up_votes": 0,
+        "down_votes": 0,
+        "published": "2024-03-11 07:41:08",
+        "purchased": "2024-02-29 23:10:14",
+        "content_en": "Great brush. It cleans well, and also massages the infant.",
+        "pros_en": [
+            "volume of work",
+            "ease of cleaning",
+            "convenience of use"
+        ],
+        "cons_en": []
+    },
+    {
+        "opinion_id": "18884025",
+        "author": "i...o",
+        "recommend": true,
+        "stars": 5.0,
+        "content_pl": "szczoteczka jest super, a kolor fantastyczny",
+        "pros_pl": [],
+        "cons_pl": [],
+        "up_votes": 0,
+        "down_votes": 0,
+        "published": "2024-08-14 12:53:17",
+        "purchased": "2024-07-30 23:33:25",
+        "content_en": "The brush is great and the color is fantastic",
+        "pros_en": [],
+        "cons_en": []
+    },
+    {
+        "opinion_id": "18445519",
+        "author": "Użytkownik Ceneo",
+        "recommend": true,
+        "stars": 5.0,
+        "content_pl": "Polski produkt, na razie wszystko super!:)",
+        "pros_pl": [
+            "głośność pracy",
+            "łatwość czyszczenia",
+            "wygoda używania"
+        ],
+        "cons_pl": [],
+        "up_votes": 0,
+        "down_votes": 0,
+        "published": "2024-02-28 14:06:33",
+        "purchased": "2024-02-09 19:25:19",
+        "content_en": "Polish product, everything is great for now! :)",
+        "pros_en": [
+            "volume of work",
+            "ease of cleaning",
+            "convenience of use"
+        ],
+        "cons_en": []
+    },
+    {
+        "opinion_id": "19218444",
+        "author": "r...2",
+        "recommend": true,
+        "stars": 5.0,
+        "content_pl": "Spełnia moje oczekiwania",
+        "pros_pl": [],
+        "cons_pl": [],
+        "up_votes": 0,
+        "down_votes": 0,
+        "published": "2024-11-20 08:52:44",
+        "purchased": "2024-11-11 21:25:40",
+        "content_en": "Meets my expectations",
+        "pros_en": [],
+        "cons_en": []
+    },
+    {
+        "opinion_id": "18086173",
+        "author": "a...2",
+        "recommend": true,
+        "stars": 5.0,
+        "content_pl": "Super",
+        "pros_pl": [
+            "głośność pracy",
+            "łatwość czyszczenia",
+            "wygoda używania"
+        ],
+        "cons_pl": [],
+        "up_votes": 1,
+        "down_votes": 0,
+        "published": "2023-11-10 10:01:15",
+        "purchased": "2023-10-19 21:23:59",
+        "content_en": "Great",
+        "pros_en": [
+            "volume of work",
+            "ease of cleaning",
+            "convenience of use"
+        ],
+        "cons_en": []
+    },
+    {
+        "opinion_id": "18167267",
+        "author": "Kinga",
+        "recommend": true,
+        "stars": 5.0,
+        "content_pl": "Piękny kolor",
+        "pros_pl": [
+            "głośność pracy",
+            "łatwość czyszczenia",
+            "wygoda używania"
+        ],
+        "cons_pl": [],
+        "up_votes": 0,
+        "down_votes": 0,
+        "published": "2023-12-04 08:08:19",
+        "purchased": "2023-11-12 11:05:26",
+        "content_en": "Beautiful color",
+        "pros_en": [
+            "volume of work",
+            "ease of cleaning",
+            "convenience of use"
+        ],
+        "cons_en": []
+    },
+    {
+        "opinion_id": "17317237",
+        "author": "m...3",
+        "recommend": true,
+        "stars": 5.0,
+        "content_pl": "Ok",
+        "pros_pl": [
+            "głośność pracy",
+            "łatwość czyszczenia",
+            "wygoda używania"
+        ],
+        "cons_pl": [],
+        "up_votes": 0,
+        "down_votes": 0,
+        "published": "2023-03-24 21:17:04",
+        "purchased": "2023-03-12 23:38:18",
+        "content_en": "Ok",
+        "pros_en": [
+            "volume of work",
+            "ease of cleaning",
+            "convenience of use"
+        ],
+        "cons_en": []
+    }
+]
